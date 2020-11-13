@@ -1,0 +1,144 @@
+// Universal Effects
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    font-family: 'Open Sans', sans-serif;
+}
+
+button:focus{
+    outline: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-link{
+    color: lime!important;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: black!important;
+}
+
+#banner{
+    // Source for clip-path:https://bennettfeely.com/clippy/
+    clip-path: polygon(50% 94%, 100% 100%, 100% 0, 0 0, 0 100%);
+    overflow: hidden;
+
+    
+    .height{
+        // On Y-axis
+        min-height: 100vh;
+
+        background: url(./Banner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        // The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+        // This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible".
+        background-size: cover;
+
+        // parallax affects
+        background-attachment: fixed;
+
+        animation-name: zoom;
+        animation-duration: 20s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    h3,h4{
+        font-weight: bolder;
+        letter-spacing: .3rem;
+    }
+    h3{
+        color: oldlace;
+
+        // transition:default value transition-delay.
+        // transition-timing-function:linear - specifies a transition effect with the same speed from start to end.
+        transition:all 0.3s linear ;
+    }
+
+    h3:hover{
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    h4{
+        color: yellow;
+        text-align: end;
+    }
+
+    // CSS3 Animations
+    // Animation name - zoom
+    // CSS transforms allow you to move, rotate, scale, and skew elements.
+    // The scale() method increases or decreases the size of an element (according to the parameters given for the width and height).
+    // The translate() method moves an element from its current position (according to the parameters given for the X-axis. 
+
+    @keyframes zoom {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.2) translateX(-5%);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+}
+
+.underline-one{
+    width: 120px;
+    height: .2rem;
+}
+
+#about{
+    .height-two{
+        min-height: 50vh;
+
+        background: url(./Banner-2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        // The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+        // This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible".
+        background-size: cover;
+
+        // parallax affects
+        background-attachment: fixed;
+    }
+}
+
+.underline{
+    width: 140px;
+    height: .3rem;
+}
+
+.image{
+    width: 20%;
+    height: 7rem;
+
+    // The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+    // This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible".
+    object-fit: cover;
+
+    border-radius: 70%;
+    margin-top: -40px;
+    margin-left: 40%;
+
+    /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+    position: relative;
+}

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-link {
+  color: lime !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: black !important;
+}
+
+#banner {
+  -webkit-clip-path: polygon(50% 94%, 100% 100%, 100% 0, 0 0, 0 100%);
+          clip-path: polygon(50% 94%, 100% 100%, 100% 0, 0 0, 0 100%);
+  overflow: hidden;
+}
+
+#banner .height {
+  min-height: 100vh;
+  background: url(./Banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#banner h3, #banner h4 {
+  font-weight: bolder;
+  letter-spacing: .3rem;
+}
+
+#banner h3 {
+  color: oldlace;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+#banner h3:hover {
+  color: aliceblue;
+  cursor: pointer;
+}
+
+#banner h4 {
+  color: yellow;
+  text-align: end;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2) translateX(-5%);
+            transform: scale(1.2) translateX(-5%);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2) translateX(-5%);
+            transform: scale(1.2) translateX(-5%);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.underline-one {
+  width: 120px;
+  height: .2rem;
+}
+
+#about .height-two {
+  min-height: 50vh;
+  background: url(./Banner-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.underline {
+  width: 140px;
+  height: .3rem;
+}
+
+.image {
+  width: 20%;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 70%;
+  margin-top: -40px;
+  margin-left: 40%;
+  /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+  position: relative;
+}
+/*# sourceMappingURL=main.css.map */
